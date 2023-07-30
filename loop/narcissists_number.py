@@ -1,19 +1,24 @@
 n=(input("pleas enter number"))
+l=int(n)
 m=(len(n))
 total=0
 my_list=[]
+y=0
 while(int(n)>0):
     digit=int(n)%10
     
-    print (int(digit),"^",m)
     x=digit**m
-    print(x)
+    print(int(digit),"^",m,"=",x)
     total=total+digit
     n=(int(n)-digit)//10
     my_list.append(x)
-#    if (n==x)
-    print(my_list)
 
-print ("the sum of the number",int(total),x)
+for i in range(m):
+    y+=int(my_list[i])
+if (l==y):
+    print ("The number is narcissists:",y)
+else:
+    print("The number is not narcissists")
+
 
     
